@@ -1,0 +1,39 @@
+name: hermes-multibot
+version: 0.2.0
+kind: standalone
+description: Up to eight independent private-DM Telegram transports sharing one Hermes profile.
+author: Ivan
+license: MIT
+requires_hermes: ">=0.23.0"
+python_dependencies:
+  - python-telegram-bot>=22.8,<23
+config_schema:
+  bots:
+    type: list
+    default: []
+    description: Explicit unique slots 1..8, lowercase aliases and nonempty numeric-string allowed_users. Shared profile is not user isolation.
+optional_env:
+  - name: MULTIBOT_SLOT_1_TOKEN
+    description: Telegram token for slot 1
+    password: true
+  - name: MULTIBOT_SLOT_2_TOKEN
+    description: Telegram token for slot 2
+    password: true
+  - name: MULTIBOT_SLOT_3_TOKEN
+    description: Telegram token for slot 3
+    password: true
+  - name: MULTIBOT_SLOT_4_TOKEN
+    description: Telegram token for slot 4
+    password: true
+  - name: MULTIBOT_SLOT_5_TOKEN
+    description: Telegram token for slot 5
+    password: true
+  - name: MULTIBOT_SLOT_6_TOKEN
+    description: Telegram token for slot 6
+    password: true
+  - name: MULTIBOT_SLOT_7_TOKEN
+    description: Telegram token for slot 7
+    password: true
+  - name: MULTIBOT_SLOT_8_TOKEN
+    description: Telegram token for slot 8
+    password: true
